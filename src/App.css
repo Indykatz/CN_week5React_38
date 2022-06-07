@@ -37,7 +37,8 @@
 }
 h4 {
   text-decoration: underline;
-  font-size: 150%;
+  font-size: 200%;
+  color: #2a5a97;
 }
 
 /* Netflix Posters */
@@ -55,7 +56,6 @@ h4 {
 }
 
 /* Counter */
-/* countBox */
 .counterBox {
   padding: 10px;
   text-align: center;
@@ -81,9 +81,20 @@ h4 {
   font-size: 200%;
 }
 
+/* put in a box */
+
+/* List */
+.removeButton,
+.submitButton {
+  color: #f49446;
+  font-size: 100%;
+  /* Want this to be on the left */
+}
+
 /* Form */
 .form {
   margin-top: 20px;
+  text-align: center;
 }
 
 /* footer */

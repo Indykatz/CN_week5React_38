@@ -14,7 +14,9 @@ const Person = ({ name, age, handleClick }) => {
       <p>
         My name is {name} and I am {age} years old
       </p>
-      <button onClick={handleClick}>Remove</button>
+      <button onClick={handleClick} className="removeButton">
+        Remove
+      </button>
     </div>
   );
 };

@@ -17,17 +17,19 @@ const Form = ({
           }}
         />
       </label>
-      <label>
-        Enter your age:
-        <input
-          type="text"
-          value={ageInput}
-          onChange={(e) => {
-            setAgeInput(e.target.value);
-          }}
-        />
-      </label>
-      <input type="submit" />
+      <p>
+        <label>
+          Enter your age:
+          <input
+            type="text"
+            value={ageInput}
+            onChange={(e) => {
+              setAgeInput(e.target.value);
+            }}
+          />
+        </label>
+      </p>
+      <input className="submitButton" type="submit" />
     </form>
   );
 };
