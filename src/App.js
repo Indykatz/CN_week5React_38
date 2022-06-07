@@ -1,10 +1,13 @@
 import "./App.css";
 import React from "react";
-// import { useState } from "react";
+import { useState } from "react";
+
 import HeaderBanner from "./components/Header";
 import FooterBanner from "./components/Footer";
 import Poster from "./components/Poster";
 import Counter from "./components/Counter";
+import Person from "./components/Person";
+import Form from "./components/Form";
 
 // IMPORT ALL PICTURES AS OBJECTS
 import fate from "./Images/fate.jpeg";
@@ -14,6 +17,27 @@ import starTrek from "./Images/starTrek.jpeg";
 import witcher from "./Images/witcher.jpeg";
 
 function App() {
+  // Persons - why here?
+  const [persons, setPersons] = useState([
+    { name: "Tracy", age: "21" },
+    { name: "Kat", age: "38" },
+  ]);
+  const handleClick = (index) => {
+    let storedPeople = [...persons];
+    storedPeople.splice(index, 1);
+    setPersons(storedPeople);
+    console.log("button was clicked");
+  };
+  // Form why here
+  const [nameInput, setNameInput] = useState("");
+  const [ageInput, setAgeInput] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setPersons([...persons, { name: nameInput, age: parseInt(ageInput) }]);
+    setNameInput("");
+    setAgeInput("");
+  };
+  // Now the App
   return (
     <div className="App">
       {/* Header */}
@@ -50,6 +74,24 @@ function App() {
         </div>
         <div>
           <h4>Lists and Forms</h4>
+          {persons.map((person, index) => {
+            return (
+              <Person
+                name={person.name}
+                age={person.age}
+                key={index}
+                // annoymous function not HOF
+                handleClick={() => handleClick(index)}
+              />
+            );
+          })}
+          <Form
+            handleSubmit={handleSubmit}
+            nameInput={nameInput}
+            setNameInput={setNameInput}
+            ageInput={ageInput}
+            setAgeInput={setAgeInput}
+          />
         </div>
       </div>
 

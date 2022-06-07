@@ -5,13 +5,13 @@ const Counter = () => {
   // counter activity
   let [count, setCount] = useState(0);
 
-  let increaseClick = () => {
+  const increaseClick = () => {
     setCount((count += 1));
   };
-  let decreaseClick = () => {
+  const decreaseClick = () => {
     setCount((count -= 1));
   };
-  let reset = () => {
+  const reset = () => {
     setCount(0);
   };
 

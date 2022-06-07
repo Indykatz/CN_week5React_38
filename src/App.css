@@ -35,7 +35,6 @@
   text-align: center;
   min-height: 700px;
 }
-
 h4 {
   text-decoration: underline;
   font-size: 150%;
@@ -60,7 +59,6 @@ h4 {
 .counterBox {
   padding: 10px;
   text-align: center;
-  /* background-color: #2a5a97; */
   color: #f49446;
   display: flex;
   justify-content: center;
@@ -68,17 +66,24 @@ h4 {
   column-gap: 20px;
 }
 .countArea {
-  /* background-color: #2a5a97; */
   color: #f49446;
   font-size: 500%;
+  margin: auto;
 }
 
 .decreaseButton,
-.increaseButton,
-.reset {
-  /* background-color: #f49446; */
+.increaseButton {
   color: #2a5a97;
-  font-size: 300%;
+  font-size: 250%;
+}
+.reset {
+  color: #2a5a97;
+  font-size: 200%;
+}
+
+/* Form */
+.form {
+  margin-top: 20px;
 }
 
 /* footer */
